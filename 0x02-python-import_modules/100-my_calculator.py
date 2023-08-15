@@ -4,7 +4,6 @@ from calculator_1 import *
 operators = ['+', '-', '*', '/']
 if __name__ == "__main__":
     if len(argv) != 4:
-        print(len(argv))
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     if argv[2] not in operators:
