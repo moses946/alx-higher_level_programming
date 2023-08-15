@@ -9,5 +9,5 @@ if __name__ == "__main__":
     if argv[2] not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-    result = eval(str(int(argv[1]))+argv[2]+str(int(argv[3])))
+    result = int(eval(str(int(argv[1]))+argv[2]+str(int(argv[3]))))
     print(f"{argv[1]} {argv[2]} {argv[3]} = {result}")
