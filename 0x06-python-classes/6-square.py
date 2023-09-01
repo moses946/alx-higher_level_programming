@@ -15,9 +15,9 @@ class Square:
             __position (tuple): Private attribute containing square coordinates
     """
     def __init__(self, size=0, position=(0, 0)):
-        """initializes size as a private attribute"""
-        self.__size = size
-        self.__position = position
+        """initializes size and position using setter methods"""
+        self.size(size)
+        self.position(position)
 
     @property
     def size(self):
@@ -26,12 +26,11 @@ class Square:
 
     @size.setter
     def size(self, value):
-        try:
-            if int(value) < 0:
-                raise ValueError("size must be >= 0")
-            self.__size = int(value)
-        except TypeError:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     @property
     def position(self):
@@ -40,9 +39,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not all(isinstance(i, int) and i >= 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -66,4 +65,4 @@ class Square:
         for _ in range(self.__position[1]):
             print()
         for _ in range(self.size):
-            print(" " + self.__position[0] + "#" * self.__size)
+            print(" " * self.__position[0] + "#" * self.__size)
