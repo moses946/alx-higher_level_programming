@@ -19,8 +19,8 @@ class Rectangle:
             width: (int) width of rectangle
             height: (int) height of rectangle
         Attributes:
-            width: Private attribute
-            height: Private attribute
+            __width: Private attribute
+            __height: Private attribute
         """
         self.width = width
         self.height = height
@@ -30,7 +30,7 @@ class Rectangle:
     def width(self):
         """ getter method for width attribute
         """
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -42,13 +42,13 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
         """ getter method for height attribute
         """
-        return (self.height)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -60,44 +60,44 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
 
     def area(self):
         """ Method that returns rectangle area
         """
-        return (self.width * self.height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """ Method that returns  rectangle perimeter
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self.width + self.height) * 2)
+        return ((self.__width + self.__height) * 2)
 
     def __str__(self):
         """ Prints the rectangle using the character '#'
         """
         rect_str = ''
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return rect_str
 
-        for row in range(self.height):
-            for column in range(self.width):
+        for row in range(self.__height):
+            for column in range(self.__width):
                 rect_str += f'{self.print_symbol}'
-            if row < self.height - 1:
+            if row < self.__height - 1:
                 rect_str += '\n'
         return rect_str
 
     def __repr__(self):
         """ Returns string representation of the rectangle
         """
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """ Detects instance deletion
         """
-        self.width = None
-        self.height = None
+        self.__width = None
+        self.__height = None
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
