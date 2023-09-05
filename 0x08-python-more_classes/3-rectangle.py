@@ -4,6 +4,10 @@
 
 
 class Rectangle:
+    """
+    A Rectangle class that initializes a rectangle instance and contains
+    several methods that operate on the rectangle instance
+    """
 
     number_of_instances = 0  # attribute containing number of instances created
 

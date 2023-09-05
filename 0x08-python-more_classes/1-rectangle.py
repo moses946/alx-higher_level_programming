@@ -4,6 +4,10 @@
 
 
 class Rectangle:
+    """
+    A Rectangle class that initializes a rectangle instance and contains
+    several methods that operate on the rectangle instance
+    """
     def __init__(self, width=0, height=0):
         """ Instantiation of Rectangle class
         Args:
