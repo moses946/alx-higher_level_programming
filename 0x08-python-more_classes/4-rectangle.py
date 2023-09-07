@@ -77,7 +77,7 @@ class Rectangle:
 
         for row in range(self.__height):
             for column in range(self.__width):
-                rect_str += f'{self.print_symbol}'
+                rect_str += '#'
             if row < self.__height - 1:
                 rect_str += '\n'
         return rect_str
