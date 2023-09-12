@@ -14,7 +14,37 @@ Validate wrong type:
     TypeError: size must be an integer
 
 Validate Negative int:
+    >>> my_instance.integer_validator("size", -8)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be greater than 0
+
+Validate 0:
     >>> my_instance.integer_validator("size", 0)
     Traceback (most recent call last):
         ...
     ValueError: size must be greater than 0
+
+Validate list value:
+    >>> my_instance.integer_validator("size", [0])
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Validate tuple value:
+    >>> my_instance.integer_validator("size", (1,))
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Validate value of None Type:
+    >>> my_instance.integer_validator("size", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Validate value of Dict Type:
+    >>> my_instance.integer_validator("size", {'4':3})
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
