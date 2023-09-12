@@ -1,0 +1,20 @@
+Using the ``BaseGeometry`` class:
+
+Import the module and create an instance:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> my_instance = BaseGeometry()
+
+Validate int value:
+    >>> my_instance.integer_validator("size", 8)
+
+Validate wrong type:
+    >>> my_instance.integer_validator("size", "1")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Validate Negative int:
+    >>> my_instance.integer_validator("size", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be greater than 0
