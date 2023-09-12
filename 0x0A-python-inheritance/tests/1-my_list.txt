@@ -1,0 +1,13 @@
+The ``1-my_list`` module
+========================
+
+Using the ``1-my_list`` module:
+-------------------------------
+
+First import the class MyList:
+    >>> MyList = __import__('1-my_list').MyList
+
+Usage:
+    >>> my_list = MyList([3,4,1,2,6])
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 6]
