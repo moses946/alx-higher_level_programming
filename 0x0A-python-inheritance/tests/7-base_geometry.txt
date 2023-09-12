@@ -44,7 +44,31 @@ Validate value of None Type:
     TypeError: size must be an integer
 
 Validate value of Dict Type:
-    >>> my_instance.integer_validator("size", {'4':3})
+    >>> my_instance.integer_validator("size", {4:3})
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Validate bool:
+    >>> my_instance.integer_validator("size", True)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Test Area method:
+    >>> my_instance.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+Test integer_validator():
+    >>> my_instance.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value
+
+Test integer_validator with one argument:
+    >>> my_instance.integer_validator("size")
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
