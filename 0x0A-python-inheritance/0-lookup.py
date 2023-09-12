@@ -8,7 +8,6 @@ def lookup(obj):
 
         Args:
             obj :(class) python object
-        
         Return:
             List : Available attributes and methods of an objects
 
