@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ This module tests if object is instance of a class
 """
 
