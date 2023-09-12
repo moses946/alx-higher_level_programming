@@ -17,15 +17,15 @@ class BaseGeometry(object):
             name :(string) Name
             value :(int) Integer
         """
-        if not isinstance(value, int):
-            raise TypeError("<name> must be an integer")
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise TypeError("<name> must be greater than 0")
+            raise TypeError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
     """Rectangle class inheriting from BaseGeometry class"""
     def __init__(self, width, height):
-        BaseGeometry.integer_validator("", width)
-        BaseGeometry.integer_validator("", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
