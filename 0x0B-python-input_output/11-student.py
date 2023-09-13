@@ -16,7 +16,8 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        return {name: getattr(self, name) for name in vars(self) if attrs == None or name in attrs}
+        a = attrs
+        return {n: getattr(self, n) for n in vars(self) if a is None or n in a}
 
     def reload_from_json(self, json):
         for key, value in json.items():
