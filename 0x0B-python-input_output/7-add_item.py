@@ -14,10 +14,10 @@ try:
     for idx, val in enumerate(sys.argv):
         if idx != 0:
             current_list.append(val)
-    save_to_json_file(current_list, "add_items.json")
+    save_to_json_file(current_list, "add_item.json")
 except Exception:
     new_list = []
     for idx, val in enumerate(sys.argv):
         if idx != 0:
             new_list.append(val)
-    save_to_json_file(new_list, "add_items.json")
+    save_to_json_file(new_list, "add_item.json")
