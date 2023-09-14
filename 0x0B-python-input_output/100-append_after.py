@@ -20,6 +20,5 @@ def append_after(filename="", search_string="", new_string=""):
                 break
             else:
                 content.insert(idx + 1, new_string)
-                break
     with open(filename, 'w', encoding="utf-8") as fileptr:
         fileptr.writelines(content)
