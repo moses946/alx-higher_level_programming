@@ -15,6 +15,11 @@ def append_after(filename="", search_string="", new_string=""):
         content = fileptr.readlines()
     for idx, line in enumerate(content):
         if search_string in line:
-            content.insert(idx + 1, new_string)
-    with open(filename, 'w') as fileptr:
+            if idx == len(content) - 1:
+                content.append(new_string)
+                break
+            else:
+                content.insert(idx + 1, new_string)
+                break
+    with open(filename, 'w', encoding="utf-8") as fileptr:
         fileptr.writelines(content)
