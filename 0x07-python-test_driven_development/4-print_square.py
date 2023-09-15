@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 The ``Print square`` module.
 Prints a square with the character '#'
@@ -6,6 +7,8 @@ Prints a square with the character '#'
     ###
     ###
 """
+
+
 def print_square(size):
     """
     Prints a square using the character '#'.
@@ -22,6 +25,7 @@ def print_square(size):
         for i in range(size):
             print('#', end='')
         print()
+
 
 if __name__ == "__main__":
     import doctest

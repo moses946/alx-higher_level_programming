@@ -1,7 +1,10 @@
+#!/usr/bin/python3
 """
 The ``text indentation`` method
 Prints a text with 2 new lines after special characters
 """
+
+
 def text_indentation(text):
     """
     Prints a text with 2 new lines after '.' , '?' and ':'
@@ -17,6 +20,7 @@ def text_indentation(text):
             print(f"{word}\n")
         else:
             print(f"{word} ", end="")
+
 
 if __name__ == "__main__":
     import doctest

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This is a module containing a matrix divider function.
 Divides all the values of a matrix
@@ -10,6 +11,8 @@ Divides all the values of a matrix
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 """
+
+
 def matrix_divided(matrix, div):
     """
     Returns a new matrix after dividing all values of a matrix
@@ -32,6 +35,7 @@ def matrix_divided(matrix, div):
         for digit in val:
             new_matrix[idx].append(round(digit / div, 2))
     return new_matrix
+
 
 if __name__ == "__main__":
     import doctest
