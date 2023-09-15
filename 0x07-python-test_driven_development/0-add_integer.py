@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
     This is the `0-add_integer` module.
     Returns the addition of two integers e.g:
@@ -5,6 +6,8 @@
         >>> add_integer(5, 10)
         15
 """
+
+
 def add_integer(a, b=98):
     """
         Computes the addition of two integers or floats
@@ -17,8 +20,9 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    
+
     return (int(a) + int(b))
+
 
 if __name__ == "__main__":
     import doctest

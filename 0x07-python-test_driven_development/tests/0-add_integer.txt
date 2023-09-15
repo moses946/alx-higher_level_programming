@@ -33,3 +33,16 @@ b is neither an int nor a float
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+a is a None
+    >>> add_integer(None, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+b is neither an int nor a float
+    >>> add_integer(5, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
