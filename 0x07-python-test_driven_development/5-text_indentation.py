@@ -19,7 +19,7 @@ def text_indentation(text):
     for i, line in enumerate(lines):
         lines[i] = line.strip()
     text = "\n".join(lines)
-    print(text)
+    print(text, end="")
 
 
 if __name__ == "__main__":
