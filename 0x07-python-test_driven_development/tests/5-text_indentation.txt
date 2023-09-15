@@ -14,7 +14,7 @@ text is a string:
     <BLANKLINE>
     Are you ready for the challenge?
     <BLANKLINE>
-    Proceed 
+    Proceed
 
 text is not a string:
     >>> text_indentation(["hello"])

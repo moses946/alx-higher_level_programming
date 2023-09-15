@@ -29,4 +29,4 @@ def print_square(size):
 
 if __name__ == "__main__":
     import doctest
-    doctest.testfile("./test/4-print_square.txt")
+    doctest.testfile("./tests/4-print_square.txt")

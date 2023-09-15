@@ -13,15 +13,15 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    list_text = text.split(' ')
-    special_chars = ['.', '?', ':']
-    for word in list_text:
-        if any(x in word for x in special_chars):
-            print(f"{word}\n")
-        else:
-            print(f"{word} ", end="")
+    for char in ".:?":
+        text = text.replace(char, char + "\n\n")
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        lines[i] = line.strip()
+    text = "\n".join(lines)
+    print(text)
 
 
 if __name__ == "__main__":
     import doctest
-    doctest.testfile("./test/5-text_indentation.txt")
+    doctest.testfile("./tests/5-text_indentation.txt")
