@@ -88,10 +88,10 @@ class Rectangle(Base):
         """Prints the rectangle with character '#' """
         for i in range(self.__y):
             print()
-        for row in range(self.__width):
+        for row in range(self.__height):
             for i in range(self.__x):
                 print(" ", end="")
-            for column in range(self.__height):
+            for column in range(self.__width):
                 print('#', end="")
             print()
 
