@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ module containing rectangle class
 """
 
@@ -9,6 +10,14 @@ class Rectangle(Base):
     """ Rectangle class inheriting from Base class
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ Initialize Rectangle class
+        Args:
+            width (int): Integer
+            height (int): Integer
+            x (int): Integer
+            y (int): Integer
+            id: Unique identifier
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -22,6 +31,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """ width setter method"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -35,6 +45,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """ height setter method"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -48,6 +59,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """ x setter method"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -61,6 +73,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """ y setter method"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -99,6 +112,7 @@ class Rectangle(Base):
                     setattr(self, attribute, value)
 
     def to_dictionary(self):
+        """ Return dict representation of class instance"""
         return {
             'width': self.__width,
             'height': self.__height,

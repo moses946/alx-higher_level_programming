@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ module containing base class
 """
 
@@ -14,6 +15,10 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ Initialize the base class
+        Args:
+            id: Unique identifier
+        """
         self.__nb_objects += 1
         if id:
             self.id = id
@@ -36,6 +41,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ Returns python object from json string"""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
