@@ -20,7 +20,7 @@ class Base:
             id: Unique identifier
         """
         self.__nb_objects += 1
-        if id:
+        if id is not None:
             self.id = id
         else:
             self.id = self.__nb_objects
