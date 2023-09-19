@@ -26,5 +26,6 @@ class TestSquare(unittest.TestCase):
         expected_dict = {'id': 1, 'size': 1, 'x': 0, 'y': 0}
         self.assertDictEqual(dict_, expected_dict)
 
+
 if __name__ == '__main__':
     unittest.main()

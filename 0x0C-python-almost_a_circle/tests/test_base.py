@@ -12,9 +12,11 @@ class TestBase(unittest.TestCase):
         self.base = Base()
 
     def test_from_json_string(self):
-        self.assertEqual(self.base.from_json_string('[{"id": 1}]'), [{'id': 1}])
+        s = [{'id': 1}]
+        self.assertEqual(self.base.from_json_string('[{"id": 1}]'), s)
         self.assertEqual(self.base.from_json_string('[]'), [])
         self.assertEqual(self.base.from_json_string(None), [])
+
 
 if __name__ == '__main__':
     unittest.main()

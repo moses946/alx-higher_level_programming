@@ -6,6 +6,7 @@ import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class TestRectangle(unittest.TestCase):
     def setUp(self):
         self.rect = Rectangle(1, 2, 0, 0, 2)
@@ -50,6 +51,7 @@ class TestRectangle(unittest.TestCase):
         dict_ = self.rect.to_dictionary()
         expected_dict = {'width': 1, 'height': 2, 'x': 0, 'y': 0, 'id': 2}
         self.assertDictEqual(dict_, expected_dict)
+
 
 if __name__ == '__main__':
     unittest.main()
