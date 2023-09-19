@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ module containing square class
 """
 
