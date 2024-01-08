@@ -7,7 +7,7 @@ if (argv.length < 4) {
   let sec = argv[2];
   for (let x = 3; x < argv.length; x++) {
     if (argv[x] > big) {
-      big = argv[x];
+      [sec, big] = [big, argv[x]];
     } else if (argv[x] > sec) {
       sec = argv[x];
     }
