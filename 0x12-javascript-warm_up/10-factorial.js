@@ -1,5 +1,4 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
 function fact (n) {
   n = Number(n);
   if (isNaN(n) || n === 1) {
@@ -7,4 +6,4 @@ function fact (n) {
   }
   return n * fact(n - 1);
 }
-console.log(fact(argv[2]));
+console.log(fact(process.argv[2]));
