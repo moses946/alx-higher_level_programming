@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""Module containing class definition of a city.
+"""
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import ForeignKey
