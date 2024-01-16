@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module that lists all states via SQLAlchemy.
+"""
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

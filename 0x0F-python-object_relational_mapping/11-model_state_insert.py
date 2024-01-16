@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""Module that adds a new state to database.
+"""
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

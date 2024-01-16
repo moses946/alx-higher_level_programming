@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module that filters states by user input.
+"""
 import MySQLdb
 import sys
 

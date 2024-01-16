@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module that lists all cities of a state.
+"""
 import MySQLdb
 import sys
 

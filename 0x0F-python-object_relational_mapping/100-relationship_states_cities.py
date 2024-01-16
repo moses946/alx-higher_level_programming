@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""Module that Creates a state with a city.
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_city import City, Base

@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module that filters states safe from SQL injection.
+"""
 import MySQLdb
 import sys
 

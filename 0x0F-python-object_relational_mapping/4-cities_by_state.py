@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module that filters cities by states.
+"""
 import MySQLdb
 import sys
 
