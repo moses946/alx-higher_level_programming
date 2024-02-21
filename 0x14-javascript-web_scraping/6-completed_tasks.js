@@ -18,4 +18,7 @@ request(url, function (err, resp, body) {
     }
     console.log(result);
   }
+  else{
+    console.error(err);
+  }
 });
