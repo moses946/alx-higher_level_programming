@@ -4,7 +4,7 @@ const request = require('request');
 const url = process.argv[2];
 
 request(url, function (err, resp, body) {
-  if (!err) {
+  if (err) {
     console.error(err);
   } else {
     const movies = JSON.parse(body).results;
