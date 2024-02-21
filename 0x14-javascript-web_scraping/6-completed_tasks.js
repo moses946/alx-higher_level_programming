@@ -3,7 +3,9 @@ const request = require('request');
 const url = process.argv[2];
 
 request(url, function (err, resp, body) {
-  if (!err) {
+  if (err) {
+    console.error(err);
+  } else {
     const todos = JSON.parse(body);
     const result = {};
     for (const i in todos) {
@@ -17,7 +19,5 @@ request(url, function (err, resp, body) {
       }
     }
     console.log(result);
-  } else {
-    console.error(err);
   }
 });

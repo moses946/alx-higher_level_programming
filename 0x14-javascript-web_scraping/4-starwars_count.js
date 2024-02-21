@@ -5,6 +5,8 @@ const url = process.argv[2];
 
 request(url, function (err, resp, body) {
   if (!err) {
+    console.error(err);
+  } else {
     const movies = JSON.parse(body).results;
     let count = 0;
     const character = 'https://swapi-api.alx-tools.com/api/people/18/';
@@ -14,7 +16,5 @@ request(url, function (err, resp, body) {
       }
     }
     console.log(count);
-  } else {
-    console.error(err);
   }
 });
