@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""
-Module that displays body of a url
+"""Takes in a URL, sends a request to the URL and
+displays the body of the response (decoded in utf-8)
+with `requests` module.
 """
 import sys
 import requests

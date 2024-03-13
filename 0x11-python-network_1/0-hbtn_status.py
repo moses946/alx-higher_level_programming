@@ -8,4 +8,5 @@ with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as resp:
     html = resp.read()
     resp_type = type(html)
     content = html.decode('utf-8')
-    print(f"Body response:\n\t- type: {resp_type}\n\t- content: {html}\n\t- utf8 content: {content}")
+    print("Body response:\n\t- type: {}\n\t- content: {}\n\t- utf8 content: {}"
+          .format(resp_type, html, content))

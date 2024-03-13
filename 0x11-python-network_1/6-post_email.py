@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""
-Script that sends a post request
+"""Takes in a URL and an email address, sends a
+POST request to the passed URL with the email
+as a parameter, and finally displays the body
+of the response.
 """
 import sys
 import requests

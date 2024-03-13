@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""
-Module that sends http requests and handles errors.
+"""Takes in a URL, sends a request to the URL and
+displays the body of the response (decoded in utf-8).
+
+In addition, it handles HTTPError exceptions to print
+the HTTP Status Code, if an error occurs.
 """
 from urllib import request, error
 import sys

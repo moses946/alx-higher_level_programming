@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-Module that sends http request
+"""Fetches the URL: https://intranet.hbtn.io/status
+with `requests` module
 """
 import requests
 

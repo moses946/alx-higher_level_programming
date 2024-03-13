@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-Module that uses Github API to get user id
+"""Takes my Github credentials (username and password)
+and uses the Github API to display my Github id.
 """
 import requests
 import sys
