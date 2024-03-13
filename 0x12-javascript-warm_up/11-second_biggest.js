@@ -3,8 +3,8 @@ const argv = process.argv;
 if (argv.length < 4) {
   console.log('0');
 } else {
-  let big = -Infinity;
-  let sec = -Infinity;
+  let big = argv[2];
+  let sec = argv[2];
   for (let x = 3; x < argv.length; x++) {
     if (argv[x] > big) {
       [sec, big] = [big, argv[x]];

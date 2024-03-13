@@ -10,7 +10,7 @@ if sys.argv[1]:
     letter = sys.argv[1]
 else:
     letter = ''
-resp = requests.post("http://0.0.0.0:5000/search_user", data={'q':letter})
+resp = requests.post("http://0.0.0.0:5000/search_user", data={'q': letter})
 js = resp.json()
 
 if js:

@@ -33,7 +33,7 @@ Matrix contains string values:
     >>> matrix_divided(matrix, 3)
     Traceback (most recent call last):
         ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix of integers/floats
 
 Matrix rows have different lengths:
     >>> matrix = [
@@ -63,6 +63,12 @@ Matrix contains both int and float values:
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+Matrix containing all values as 0.0 and divisor is float(inf):
+    >>> matrix = [
+    ...		[0.0, 0.0, 0.0],
+    ... 	[0.0, 0.0, 0.0]]
+    >>>  matrix_divided(matrix, float(inf))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 Missing one argument:
     >>> matrix_divided(3)
     Traceback (most recent call last):

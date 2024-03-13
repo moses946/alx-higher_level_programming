@@ -11,8 +11,8 @@ password = "Bearer " + sys.argv[2]
 
 headers = {
     "Accept": "application/vnd.github+json",
-    "Authorization" : password,
-    "X-GitHub-Api-Version" : "2022-11-28"
+    "Authorization": password,
+    "X-GitHub-Api-Version": "2022-11-28"
 }
 resp = requests.get(url, headers=headers)
 print(resp)
